@@ -32,7 +32,7 @@ const Home = () => {
 
         {/* right side */}
         <div className="flex justify-center items-center">
-          <img src={HomeImg} alt="Home Image" />
+          <img src={HomeImg} alt="Home" />
         </div>
       </div>
     </div>

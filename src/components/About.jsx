@@ -9,7 +9,6 @@ import HtmlImg from "../assets/images/html.png";
 import JsImg from "../assets/images/javascript.png";
 import SqlImg from "../assets/images/sql.png";
 import ReactImg from "../assets/images/react.png";
-import AboutImg from "../assets/images/home-img.png";
 
 const About = () => {
   return (
@@ -68,7 +67,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <p className="text-gray-300 font-semibold my-3">//More on my CV.</p>
+          <p className="text-gray-300 font-semibold my-3">More on my CV.</p>
         </div>
 
         {/* right side */}
