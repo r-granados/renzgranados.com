@@ -1,6 +1,5 @@
 import React from "react";
-import { HiOutlineMail } from "react-icons/hi";
-import { BsTelephone } from "react-icons/bs";
+import { contactList } from "../data/Data";
 
 const Contact = () => {
   return (
@@ -17,10 +16,7 @@ const Contact = () => {
         </div>
 
         <div className="flex flex-col gap-3">
-          {[
-            [<HiOutlineMail size={30} />, "hello@renzgranados.com"],
-            [<BsTelephone size={25} />, "+63 917 685 6069"],
-          ].map(([icon, text]) => (
+          {contactList.map(([icon, text]) => (
             <div className="w-[260px] text-gray-300 flex justify-start items-center">
               <div className=" bg-[#5414ac] w-[50px] h-[50px] flex justify-center items-center rounded-full">
                 {icon}

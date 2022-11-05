@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { fbUrl, igUrl, gitUrl, liUrl, mailUrl } from "../data/Data";
 import MyCV from "../assets/files/renz-cv.pdf";
 import LogoImg from "../assets/images/logo.png";
-import { FaBars, FaTimes, FaLinkedin, FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
+
+import { navList, socialsListColored } from "../data/Data";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -24,7 +24,6 @@ const Navbar = () => {
   const navClass = "fixed w-full h-[75px] flex justify-between items-center p-4 text-gray-50";
 
   //will be used in social media class at the bottom
-  const socClass = "w-[160px] h-[60px] flex items-center justify-center ml-[-100px] hover:ml-[-10px] duration-300";
 
   return (
     <div className={scrolled ? "bg-[#000112] " + navClass : "bg-[#0d012c] " + navClass}>
@@ -43,13 +42,7 @@ const Navbar = () => {
 
       {/*Menu desktop*/}
       <ul className="md:flex hidden w-full justify-end items-center">
-        {[
-          ["home", "HOME"],
-          ["about", "ABOUT"],
-          ["skills", "SKILLS"],
-          ["projects", "PROJECTS"],
-          ["contact", "CONTACT"],
-        ].map(([section, title]) => (
+        {navList.map(([section, title]) => (
           <li className="hover:text-[#03C03C]">
             <Link to={section} smooth={true} duration={500}>
               {title}
@@ -73,13 +66,7 @@ const Navbar = () => {
             ? "hidden"
             : "md:hidden absolute w-full h-screen top-0 left-0 flex flex-col justify-center items-center bg-[#0d012cf5] duration-300"
         }>
-        {[
-          ["home", "HOME"],
-          ["about", "ABOUT"],
-          ["skills", "SKILLS"],
-          ["projects", "PROJECTS"],
-          ["contact", "CONTACT"],
-        ].map(([section, title]) => (
+        {navList.map(([section, title]) => (
           <li className="py-6 text-4xl">
             <Link to={section} smooth={true} duration={500} onClick={handleClick}>
               {title}
@@ -98,13 +85,7 @@ const Navbar = () => {
       {/* Socilas */}
       <div className="hidden lg:flex fixed  flex-col top-[35%] left-0">
         <ul>
-          {[
-            [fbUrl, "Facebook", <FaFacebook size={25} />, socClass + " bg-[#4267B2]"],
-            [igUrl, "Instagram", <FaInstagram size={25} />, socClass + " bg-[#cd486b]"],
-            [gitUrl, "Github", <FaGithub size={25} />, socClass + " bg-[#333]"],
-            [liUrl, "Linkedin", <FaLinkedin size={25} />, socClass + " bg-[#0A66C2]"],
-            [mailUrl, "Email", <HiOutlineMail size={25} />, socClass + " bg-[#6cc644]"],
-          ].map(([url, title, logo, cls]) => (
+          {socialsListColored.map(([url, title, logo, cls]) => (
             <li className={cls}>
               <a href={url} target="_blank" rel="noreferrer" className="w-full flex justify-between items-center">
                 {title} {logo}

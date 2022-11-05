@@ -1,14 +1,5 @@
 import React from "react";
-import PythonImg from "../assets/images/python.png";
-import AirflowImg from "../assets/images/airflow.png";
-import AwsImg from "../assets/images/aws.png";
-import CssImg from "../assets/images/css.png";
-import DockerImg from "../assets/images/docker.png";
-import GitImg from "../assets/images/git.png";
-import HtmlImg from "../assets/images/html.png";
-import JsImg from "../assets/images/javascript.png";
-import SqlImg from "../assets/images/sql.png";
-import ReactImg from "../assets/images/react.png";
+import { techStack1, techStack2 } from "../data/Data";
 
 const About = () => {
   return (
@@ -21,13 +12,7 @@ const About = () => {
               <p>Data Engineering</p>
             </div>
             <div className="flex justify-evenly  text-white">
-              {[
-                ["Python", PythonImg],
-                ["Airflow", AirflowImg],
-                ["Docker", DockerImg],
-                ["AWS", AwsImg],
-                ["SQL", SqlImg],
-              ].map(([title, img]) => (
+              {techStack1.map(([title, img]) => (
                 <p>
                   {title} <img src={img} alt="techImg" />
                 </p>
@@ -40,13 +25,7 @@ const About = () => {
               <p>Full Stack Dev</p>
             </div>
             <div className="flex justify-evenly  text-white">
-              {[
-                ["React", ReactImg],
-                ["Javascript", JsImg],
-                ["HTML", HtmlImg],
-                ["CSS", CssImg],
-                ["Git", GitImg],
-              ].map(([title, img]) => (
+              {techStack2.map(([title, img]) => (
                 <p>
                   {title} <img src={img} alt="techImg" />
                 </p>
