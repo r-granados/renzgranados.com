@@ -4,7 +4,7 @@ import HomeImg from "../assets/images/home-img.png";
 import { mailUrl } from "../data/Data";
 const Home = () => {
   return (
-    <div name="home" className=" w-full h-screen pt-[75px]">
+    <div name="home" className=" w-full min-h-screen flex flex-col justify-center items-center pt-[75px]">
       <div className="grid md:grid-cols-2 gap-2 w-full max-w-[1000px] h-full mx-auto p-8 ">
         {/* left side */}
 

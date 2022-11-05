@@ -3,7 +3,7 @@ import { techStack1, techStack2 } from "../data/Data";
 
 const About = () => {
   return (
-    <div name="about" className=" w-full h-screen ">
+    <div name="about" className=" w-full min-h-screen flex flex-col justify-center items-center ">
       <div className="grid md:grid-cols-2 gap-4 w-full max-w-[1000px] h-full mx-auto px-8 ">
         <div className="order-last md:order-first flex flex-col justify-center items-center mx-4">
           <h2 className="colored-title my-4">FREQUENTLY USED TECHNOLOGIES</h2>
