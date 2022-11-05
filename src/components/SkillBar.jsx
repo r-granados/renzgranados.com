@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class SkillBar extends Component {
   render() {
     return (
-      <div className="flex flex-col">
+      <div className="flex flex-col px-4">
         <p>{this.props.skill}</p>
         <div class="w-full bg-gray-200 rounded-full">
           <div

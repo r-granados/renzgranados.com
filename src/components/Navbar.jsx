@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { fbUrl, igUrl, gitUrl, liUrl, mailUrl } from "../data/Data";
 import MyCV from "../assets/files/renz-cv.pdf";
+import LogoImg from "../assets/images/logo.png";
 import {
   FaBars,
   FaTimes,
@@ -40,7 +41,7 @@ const Navbar = () => {
       <div className="w-full z-10">
         {/*Add logo, for now name*/}
         <a href="/" className="text-4xl font-semibold">
-          Renz.
+          <img src={LogoImg} alt="Renz." style={{ height: "65px" }} />
         </a>
       </div>
 
