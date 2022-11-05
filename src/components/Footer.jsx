@@ -11,21 +11,17 @@ const Footer = () => {
       </div>
 
       <div className="lg:hidden flex w-[200px] justify-between">
-        <a href={fbUrl} target="_blank" rel="noreferrer">
-          <FaFacebook size={25} />
-        </a>
-        <a href={igUrl} target="_blank" rel="noreferrer">
-          <FaInstagram size={25} />
-        </a>
-        <a href={gitUrl} target="_blank" rel="noreferrer">
-          <FaGithub size={25} />
-        </a>
-        <a href={liUrl} target="_blank" rel="noreferrer">
-          <FaLinkedin size={25} />
-        </a>
-        <a href={mailUrl} target="_blank" rel="noreferrer">
-          <HiOutlineMail size={25} />
-        </a>
+        {[
+          [fbUrl, <FaFacebook size={25} />],
+          [igUrl, <FaInstagram size={25} />],
+          [gitUrl, <FaGithub size={25} />],
+          [liUrl, <FaLinkedin size={25} />],
+          [mailUrl, <HiOutlineMail size={25} />],
+        ].map(([url, icon]) => (
+          <a href={url} target="_blank" rel="noreferrer">
+            {icon}
+          </a>
+        ))}
       </div>
     </div>
   );

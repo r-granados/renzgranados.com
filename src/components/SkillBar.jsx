@@ -8,8 +8,7 @@ class SkillBar extends Component {
         <div class="w-full bg-gray-200 rounded-full">
           <div
             className="bg-[#5414ac] text-xs font-medium text-center p-0.5 leading-none rounded-l-full"
-            style={{ width: this.props.percent + "%" }}
-          >
+            style={{ width: this.props.percent + "%" }}>
             {this.props.percent}%
           </div>
         </div>
