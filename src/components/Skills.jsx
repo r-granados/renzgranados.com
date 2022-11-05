@@ -8,7 +8,7 @@ const Skills = () => {
         <div className="my-4">
           <h1 className="text-[#03C03C] text-xl">SKILLS</h1>
           <h1 className="text-white text-4xl sm:text-5xl font-semibold">
-            My Current Skills Set
+            My Current Skillset
           </h1>
         </div>
 
@@ -34,7 +34,7 @@ const Skills = () => {
           <SkillBar
             skill="Data Engineering | ETL"
             percent="80"
-            techs="Python, Spark, Airflow"
+            techs="Python, Spark, Airflow, SQL"
           />
 
           <SkillBar
