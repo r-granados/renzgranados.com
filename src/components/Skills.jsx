@@ -8,7 +8,7 @@ const Skills = () => {
       <div className="flex flex-col gap-2 w-full max-w-[1000px] h-full mx-auto p-8 ">
         <div className="my-4">
           <h1 className="page-title">SKILLS</h1>
-          <h1 className="text-4xl sm:text-5xl font-semibold my-2">My Current Skillset</h1>
+          <h1 className="text-4xl sm:text-5xl font-semibold">My Current Skillset</h1>
         </div>
 
         <div className="grid md:grid-cols-2 gap-4 w-full h-full text-xl font-[monospace]">
@@ -27,13 +27,14 @@ const Skills = () => {
           <SkillBar skill="DB Management" percent="65" techs="MySQL, PostgreSQL, IBM DB2, MSSQL Server" />
         </div>
 
-        <h1 className="text-3xl sm:text-4xl font-semibold my-[20px]">Cerificates</h1>
-        <div className="grid md:grid-cols-2 gap-4 w-full h-full text-xl font-[monospace]">
+        <br />
+        <h1 className="text-3xl sm:text-4xl font-semibold">Cerificates</h1>
+        <div className="grid md:grid-cols-2 gap-4 w-full h-full my-4 font-[monospace]">
           {certList.map(([cert, thumbnail, title]) => (
             <div className="flex flex-col justify-center items-center text-center">
               <a href={cert} target="_blank" rel="noreferrer">
                 <img src={thumbnail} alt="aws-cert" />
-                <p className="text-sm">{title}</p>
+                <p>{title}</p>
               </a>
             </div>
           ))}
