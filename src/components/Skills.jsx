@@ -4,14 +4,14 @@ import { certList } from "../data/Data";
 
 const Skills = () => {
   return (
-    <div name="skills" className="w-full min-h-screen flex flex-col justify-center items-center pt-[75px]">
+    <div name="skills" className="w-full md:h-screen h-full flex flex-col justify-center items-center pt-[75px]">
       <div className="flex flex-col gap-2 w-full max-w-[1000px] h-full mx-auto p-8 ">
         <div className="my-4">
           <h1 className="page-title">SKILLS</h1>
           <h1 className="text-4xl sm:text-5xl font-semibold">My Current Skillset</h1>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4 w-full h-full text-xl font-[monospace]">
+        <div className="grid md:grid-cols-2 gap-4 w-full  text-xl font-[monospace]">
           <SkillBar skill="Backend Development" percent="95" techs="Python, Javascript, SQL, PHP" />
 
           <SkillBar skill="Frontend Development" percent="40" techs="Javascript, HTML, CSS" />
@@ -26,18 +26,18 @@ const Skills = () => {
 
           <SkillBar skill="DB Management" percent="65" techs="MySQL, PostgreSQL, IBM DB2, MSSQL Server" />
         </div>
-
-        <br />
-        <h1 className="text-3xl sm:text-4xl font-semibold">Cerificates</h1>
-        <div className="grid md:grid-cols-2 gap-4 w-full h-full my-4 font-[monospace]">
-          {certList.map(([cert, thumbnail, title]) => (
-            <div className="flex flex-col justify-center items-center text-center">
-              <a href={cert} target="_blank" rel="noreferrer">
-                <img src={thumbnail} alt="aws-cert" />
-                <p>{title}</p>
-              </a>
-            </div>
-          ))}
+        <div className="my-4">
+          <h1 className="text-3xl sm:text-4xl font-semibold">Certificates</h1>
+          <div className="grid md:grid-cols-2 gap-4 w-full h-full my-4 font-[monospace]">
+            {certList.map(([cert, thumbnail, title]) => (
+              <div className="flex flex-col justify-center items-center text-center">
+                <a href={cert} target="_blank" rel="noreferrer">
+                  <img src={thumbnail} alt="aws-cert" />
+                  <p>{title}</p>
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

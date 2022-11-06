@@ -3,7 +3,7 @@ import { contactList } from "../data/Data";
 
 const Contact = () => {
   return (
-    <div name="contact" className="w-full h-[600px] pt-[75px]">
+    <div name="contact" className="w-full md:h-screen h-full pt-[75px]">
       <div className="flex flex-col gap-2 w-full max-w-[1000px] h-full mx-auto p-8 ">
         <div className="my-4">
           <h1 className="page-title">CONTACT</h1>
