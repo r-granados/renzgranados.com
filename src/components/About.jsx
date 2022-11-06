@@ -11,10 +11,10 @@ const About = () => {
             <div className="text-center my-2 px-1 bg-[#fada5e] text-[#0d012c] w-[200px]">
               <p>Data Engineering</p>
             </div>
-            <div className="flex justify-evenly  text-white">
+            <div className="flex justify-evenly text-center text-white">
               {techStack1.map(([title, img]) => (
                 <p>
-                  {title} <img src={img} alt="techImg" />
+                  {title} <img className="mx-auto" src={img} alt="techImg" />
                 </p>
               ))}
             </div>
@@ -24,10 +24,10 @@ const About = () => {
             <div className="text-center my-2 px-1 bg-[#fada5e] text-[#0d012c] w-[200px]">
               <p>Full Stack Dev</p>
             </div>
-            <div className="flex justify-evenly  text-white">
+            <div className="flex justify-evenly text-center text-white">
               {techStack2.map(([title, img]) => (
                 <p>
-                  {title} <img src={img} alt="techImg" />
+                  {title} <img className="mx-auto" src={img} alt="techImg" />
                 </p>
               ))}
             </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import { SlArrowDown } from "react-icons/sl";
 import HomeImg from "../assets/images/home-img.png";
 import { mailUrl } from "../data/Data";
 const Home = () => {
@@ -27,6 +28,9 @@ const Home = () => {
         <div className="flex justify-center items-center">
           <img src={HomeImg} alt="Home" />
         </div>
+      </div>
+      <div className="mx-auto my-2 flex justify-center animate-bounce">
+        <SlArrowDown size={25} />
       </div>
     </div>
   );
