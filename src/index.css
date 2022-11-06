@@ -14,7 +14,8 @@
     @apply px-4 cursor-pointer;
   }
   .nav-li {
-    @apply hover:text-[#03C03C] text-[#0d012c] dark:text-[#ecedf3];
+    @apply hover:text-[#03C03C] dark:hover:text-[#03C03C];
+    @apply text-[#0d012c] dark:text-[#ecedf3];
   }
   .mobi-nav {
     @apply bg-[#ecedf3] dark:bg-[#0d012c];

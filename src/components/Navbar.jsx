@@ -6,6 +6,7 @@ import { Link } from "react-scroll";
 
 import { navList, socialsListColored } from "../data/Data";
 import ThemeToggle from "./ThemeToggle";
+import ReturnTop from "./ReturnTop";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -62,8 +63,8 @@ const Navbar = () => {
       <ul
         className={
           !click
-            ? "hidden"
-            : "mobi-nav md:hidden absolute w-full h-screen top-0 left-0 flex flex-col justify-center items-center duration-300"
+            ? "absolute top-0 right-[-100%]"
+            : "mobi-nav md:hidden absolute w-full h-screen top-0 right-0 flex flex-col justify-center items-center duration-300"
         }>
         {navList.map(([section, title]) => (
           <li className="nav-li py-6 text-4xl">
@@ -94,7 +95,8 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <ThemeToggle />
+      {!click ? <ThemeToggle /> : ""}
+      {!click ? <ReturnTop /> : ""}
     </div>
   );
 };
