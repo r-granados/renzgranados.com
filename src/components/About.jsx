@@ -40,7 +40,7 @@ const About = () => {
           <h1 className="page-title">ABOUT ME</h1>
           <h2 className="text-2xl sm:text-3xl py-2">I MAY BE THE BEST-FIT FOR YOUR UPCOMING PROJECT!</h2>
           <p className="my-2">
-            I am a 25 years old creative Data Engineer and a self-taught Full Stack Developer and Cross-Platform App
+            I am a 25 years old creative Data Engineer, and a self-taught Full Stack Developer and Cross-Platform App
             Developer. I build robust and scalable data orchestrations with clean, appealing and functional interfaces.
           </p>
           <p className="colored-title my-3">
