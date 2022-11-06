@@ -23,16 +23,13 @@ const Navbar = () => {
 
   window.addEventListener("scroll", handleScroll);
 
-  const navClass = "fixed w-full h-[75px] flex justify-between items-center p-4 text-gray-50";
+  const navClass = "fixed w-full h-[75px] flex justify-between items-center p-4 text-gray-50 z-10";
 
   return (
     <div className={scrolled ? "bg-white dark:bg-[#000112] " + navClass : navClass}>
       {/* Logo */}
       <div className="w-full z-10">
-        {/*Add logo, for now name*/}
-        <a href="/" className="text-4xl font-semibold">
-          <img src={LogoImg} alt="Renz." style={{ height: "65px" }} />
-        </a>
+        <img src={LogoImg} alt="Renz." style={{ height: "65px" }} />
       </div>
 
       {/*Hamburger*/}
@@ -82,7 +79,7 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* Socilas */}
+      {/* Socials */}
       <div className="hidden lg:flex fixed  flex-col top-[35%] left-0">
         <ul>
           {socialsListColored.map(([url, title, logo, cls]) => (
