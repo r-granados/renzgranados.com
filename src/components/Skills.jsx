@@ -27,7 +27,7 @@ const Skills = () => {
           <SkillBar skill="DB Management" percent="65" techs="MySQL, PostgreSQL, IBM DB2, MSSQL Server" />
         </div>
 
-        <h1 className="text-3xl sm:text-4xl font-semibold my-6">Cerificates</h1>
+        <h1 className="text-3xl sm:text-4xl font-semibold my-[20px]">Cerificates</h1>
         <div className="grid md:grid-cols-2 gap-4 w-full h-full text-xl font-[monospace]">
           {certList.map(([cert, thumbnail, title]) => (
             <div className="flex flex-col justify-center items-center text-center">

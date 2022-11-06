@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MyCV from "../assets/files/renz-cv.pdf";
+import MyCV from "../assets/files/renz-granados-cv.pdf";
 import LogoImg from "../assets/images/logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
