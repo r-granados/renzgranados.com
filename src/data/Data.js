@@ -9,6 +9,11 @@ import JsImg from "../assets/images/javascript.png";
 import SqlImg from "../assets/images/sql.png";
 import ReactImg from "../assets/images/react.png";
 
+import CcpImg from "../assets/images/aws-ccp-thumbnail.png";
+import CdaImg from "../assets/images/aws-cda-thumbnail.png";
+import CcpCert from "../assets/files/renz-granados-aws-ccp-cert.pdf";
+import CdaCert from "../assets/files/renz-granados-aws-cda-cert.pdf";
+
 import { HiOutlineMail } from "react-icons/hi";
 import { BsTelephone } from "react-icons/bs";
 
@@ -83,5 +88,11 @@ export const navList = [
 ];
 //
 
-// yellow text-[#fada5e]
-// green text-[#03C03C]
+//for Skills page, certificates
+
+export const certList = [
+  [CcpCert, CcpImg, "AWS Certified Cloud Practitioner"],
+  [CdaCert, CdaImg, "AWS Certified Developer Associate"],
+];
+
+//
