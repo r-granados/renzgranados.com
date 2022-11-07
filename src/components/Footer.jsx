@@ -3,7 +3,7 @@ import { socialsList } from "../data/Data";
 
 const Footer = () => {
   return (
-    <div className="text-sm w-full flex sm:h-[50px] h-[100px] sm:flex-row flex-col  justify-between items-center p-4 bg-[#5414ac] text-gray-50">
+    <div className="text-sm w-full flex sm:h-[50px] h-full sm:flex-row flex-col  justify-between items-center p-4 bg-[#5414ac] text-gray-50">
       <div>
         <p className="font-ligh">© Renz Granados 2022</p>
       </div>

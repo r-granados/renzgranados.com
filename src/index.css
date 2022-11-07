@@ -13,11 +13,21 @@
   li {
     @apply px-4 cursor-pointer;
   }
+
+  .nav-bar {
+    @apply fixed w-full h-[75px] flex justify-between items-center p-4 text-gray-50 z-10;
+  }
+  .page-container {
+    @apply w-full h-full min-h-screen flex flex-col justify-center items-center py-[30px] md:py-0;
+  }
+  .page-content {
+    @apply w-full max-w-[1000px] h-full mx-auto px-8;
+  }
   .nav-li {
     @apply hover:text-[#03C03C] dark:hover:text-[#03C03C];
     @apply text-[#0d012c] dark:text-[#ecedf3];
   }
-  .mobi-nav {
+  .bg-switch {
     @apply bg-[#ecedf3] dark:bg-[#0d012c];
   }
   .page-title {

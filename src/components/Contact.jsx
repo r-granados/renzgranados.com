@@ -3,8 +3,8 @@ import { contactList } from "../data/Data";
 
 const Contact = () => {
   return (
-    <div name="contact" className="w-full md:h-screen h-full pt-[75px]">
-      <div className="flex flex-col gap-2 w-full max-w-[1000px] h-full mx-auto p-8 ">
+    <div name="contact" className="page-container">
+      <div className="page-content flex flex-col gap-8">
         <div className="my-4">
           <h1 className="page-title">CONTACT</h1>
           <h1 className="text-4xl sm:text-5xl font-semibold">Let's Talk!</h1>

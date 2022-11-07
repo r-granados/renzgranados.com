@@ -5,8 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 import { navList, socialsListColored } from "../data/Data";
-import ThemeToggle from "./ThemeToggle";
-import ReturnTop from "./ReturnTop";
+import BottomMenu from "./BottomMenu";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -23,20 +22,15 @@ const Navbar = () => {
 
   window.addEventListener("scroll", handleScroll);
 
-  const navClass = "fixed w-full h-[75px] flex justify-between items-center p-4 text-gray-50";
-
   return (
-    <div className={scrolled ? "bg-white dark:bg-[#000112] " + navClass : navClass}>
+    <div className={scrolled ? "nav-bar bg-white dark:bg-[#000112] " : "nav-bar"}>
       {/* Logo */}
-      <div className="w-full z-10">
-        {/*Add logo, for now name*/}
-        <a href="/" className="text-4xl font-semibold">
-          <img src={LogoImg} alt="Renz." style={{ height: "65px" }} />
-        </a>
+      <div className="w-full z-20">
+        <img src={LogoImg} alt="Renz." style={{ height: "65px" }} />
       </div>
 
       {/*Hamburger*/}
-      <div className="nav-li md:hidden z-10" onClick={handleClick}>
+      <div className="nav-li md:hidden z-20" onClick={handleClick}>
         {click ? <FaTimes size={20} /> : <FaBars size={20} />}
       </div>
 
@@ -64,7 +58,7 @@ const Navbar = () => {
         className={
           !click
             ? "absolute top-0 right-[-100%]"
-            : "mobi-nav md:hidden absolute w-full h-screen top-0 right-0 flex flex-col justify-center items-center duration-300"
+            : "bg-switch z-10 md:hidden absolute w-full h-screen top-0 right-0 flex flex-col justify-center items-center duration-300"
         }>
         {navList.map(([section, title]) => (
           <li className="nav-li py-6 text-4xl">
@@ -82,7 +76,7 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* Socilas */}
+      {/* Socials */}
       <div className="hidden lg:flex fixed  flex-col top-[35%] left-0">
         <ul>
           {socialsListColored.map(([url, title, logo, cls]) => (
@@ -95,8 +89,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {!click ? <ThemeToggle /> : ""}
-      {!click ? <ReturnTop /> : ""}
+      <BottomMenu />
     </div>
   );
 };
