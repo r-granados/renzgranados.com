@@ -57,7 +57,7 @@ const Navbar = () => {
       <ul
         className={
           !click
-            ? "absolute top-0 right-[-100%]"
+            ? "fixed top-0 right-[-100%]"
             : "bg-switch z-10 md:hidden absolute w-full h-screen top-0 right-0 flex flex-col justify-center items-center duration-300"
         }>
         {navList.map(([section, title]) => (
