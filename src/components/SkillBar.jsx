@@ -7,7 +7,7 @@ class SkillBar extends Component {
         <p>{this.props.skill}</p>
         <div class="w-full bg-white dark:bg-gray-200 rounded-full">
           <div
-            className="bg-[#5414ac] text-[#ecedf3] dark: text-xs font-medium text-center p-0.5 leading-none rounded-l-full"
+            className="bg-[#5414ac] text-[#ecedf3] dark: text-xs font-medium text-center p-0.5 leading-none rounded-l-full duration-1000"
             style={{ width: this.props.percent + "%" }}>
             {this.props.percent}%
           </div>

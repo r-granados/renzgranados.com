@@ -5,8 +5,8 @@ import HomeImg from "../assets/images/home-img.png";
 import { mailUrl } from "../data/Data";
 const Home = () => {
   return (
-    <div name="home" className=" w-full md:h-screen h-full flex flex-col justify-center items-center pt-[75px]">
-      <div className="grid md:grid-cols-2 gap-2 w-full max-w-[1000px] h-full mx-auto p-8 ">
+    <div name="home" className="page-container pt-[100px]">
+      <div className="page-content grid md:grid-cols-2 gap-8">
         {/* left side */}
 
         <div className="flex flex-col justify-center font-semibold text-center sm:text-left">
@@ -29,7 +29,7 @@ const Home = () => {
           <img src={HomeImg} alt="Home" />
         </div>
       </div>
-      <div className="mx-auto my-2 flex justify-center animate-bounce">
+      <div className="mx-auto my-4 flex justify-center animate-bounce">
         <SlArrowDown size={25} />
       </div>
     </div>

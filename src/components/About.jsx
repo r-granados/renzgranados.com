@@ -1,11 +1,12 @@
 import React from "react";
 import { techStack1, techStack2 } from "../data/Data";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div name="about" className=" w-full md:h-screen h-full mt-4 flex flex-col justify-center items-center ">
-      <div className="grid md:grid-cols-2 gap-4 w-full max-w-[1000px] h-full mx-auto px-8 ">
-        <div className="order-last md:order-first flex flex-col justify-center items-center mx-4">
+    <div name="about" className="page-container">
+      <div className="page-content grid md:grid-cols-2 gap-8">
+        <div className="order-last md:order-first flex flex-col justify-center items-center">
           <h2 className="colored-title my-4">FREQUENTLY USED TECHNOLOGIES</h2>
           <div className="w-full items-center bg-[#5414ac] rounded-3xl py-3 mb-4 font-[monospace]">
             <div className="text-center my-2 px-1 bg-[#fada5e] text-[#0d012c] w-[200px]">
@@ -14,7 +15,12 @@ const About = () => {
             <div className="flex justify-evenly text-center text-white">
               {techStack1.map(([title, img]) => (
                 <p>
-                  {title} <img className="mx-auto" src={img} alt="techImg" />
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}>
+                    {title} <img className="mx-auto" src={img} alt="techImg" />
+                  </motion.p>
                 </p>
               ))}
             </div>
@@ -26,9 +32,12 @@ const About = () => {
             </div>
             <div className="flex justify-evenly text-center text-white">
               {techStack2.map(([title, img]) => (
-                <p>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}>
                   {title} <img className="mx-auto" src={img} alt="techImg" />
-                </p>
+                </motion.p>
               ))}
             </div>
           </div>
