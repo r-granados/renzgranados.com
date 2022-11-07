@@ -15,13 +15,13 @@
   }
 
   .nav-bar {
-    @apply fixed w-full h-[75px] flex justify-between items-center p-4 text-gray-50 z-10;
+    @apply sticky top-0 w-full h-[75px] flex justify-between items-center p-4 text-gray-50 z-10;
   }
   .page-container {
-    @apply w-full h-full min-h-screen flex flex-col justify-center items-center py-[30px] md:py-0;
+    @apply w-full h-full min-h-screen flex flex-col justify-center items-center px-8;
   }
   .page-content {
-    @apply w-full max-w-[1000px] h-full mx-auto px-8;
+    @apply w-full max-w-[1200px] h-full;
   }
   .nav-li {
     @apply hover:text-[#03C03C] dark:hover:text-[#03C03C];
